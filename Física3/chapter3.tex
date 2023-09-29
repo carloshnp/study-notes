@@ -1,0 +1,108 @@
+\lecture{3}{20 sep}{Lei de Gauss}
+
+\section*{Fluxo elétrico}
+
+  \paragraph{Qual é o principal intuito da lei de Gauss?} A lei de Gauss relaciona o campo elétrico em pontos numa superfície Gaussiana (fechada) com a carga total encoberta por essa superfície.
+
+  \paragraph{O que é o fluxo elétrico?} É uma determinação escalar quantitativa do total de campo elétrico que atravessa uma superfície. 
+
+  \paragraph{O que é o vetor de área numa superfície?} É um vetor $ \Delta \vec{A} $, perpendicular à uma seção de área $ \Delta A $ que possui uma magnitude igual à área da seção.
+
+  \paragraph{Como é dado o fluxo elétrico por uma elemento de área?} Com o vetor de área, podemos definir o fluxo elétrico como a quantidade de campo elétrico atravessando uma seção de área:
+  \[
+    \Delta \phi = \vec{E} \cdot \Delta \vec{A}
+  \]
+
+  O fluxo elétrico possui uma unidade SI de $ N \cdot m^2/C $ (newton metro quadrado por coulomb).
+
+  \paragraph{Como é dado o fluxo elétrico total por uma superfície?} Para encontrar o fluxo total, devemos somar o fluxo em todas as seções de área, utilizando uma integral:
+  \[
+    \phi = \sum \vec{E} \cdot \Delta \vec{A} \ \Rightarrow \ \phi = \int \vec{E} \cdot d \vec{a}
+  \]
+
+  Para uma superfície plana e um campo elétrico uniforme, temos que: 
+  \begin{gather}
+    \begin{align}
+      \phi &= \int E \ dA = E \cos{\theta} \int dA \\
+      \phi &= E cos \theta A
+    \end{align}
+  \end{gather}
+
+  \paragraph{Como o campo se relaciona com o sentido do fluxo?} Um campo que atravessa a superfície para dentro é um fluxo negativo. Se ele atravessa para fora da superfície, é um fluxo positivo. Um campo que tangencia a superfície possui fluxo igual a zero.
+
+  \paragraph{Como é dado o fluxo elétrico líquido por uma superfície fechada?} Para integrar através da superfície fechada inteira e obter o fluxo líquido pela superfície (dependendo do sentido do campo elétrico), realizamos uma integral de linha:
+  \[
+    \phi = \oint \vec{E} \cdot d \vec{A}
+  \]
+\section*{Lei de Gauss}
+  
+  \paragraph{O que a lei de gauss define?} Ela relaciona o fluxo total $ \phi $ com a carga total $ q_{\text{enc}} $ que está encoberta pela superfície, definindo:
+
+  \begin{gather}
+    \begin{align}
+      \epsilon_0 \phi = q_{\text{enc}} \\
+      \epsilon_0 \oint \vec{E} \cdot d \vec{A} = q_{\text{enc}}
+    \end{align}
+  \end{gather}
+
+  \paragraph{De que forma as cargas fora da superfície Gaussiana atuam no fluxo pela superfície?} Como o fluxo do campo que entra é igual ao do que sai da superfície, o fluxo total é igual a zero, ou seja, o campo elétrico por conta de uma carga fora da superfície não contribui para o fluxo total através da superfície.
+
+  \paragraph{De que forma podemos encontrar o campo elétrico de uma partícula carregada pela lei de Gauss?} Considerando uma partícula positiva no centro de uma superfície Gaussiana esférica, temos que o campo elétrico se direciona para fora, com ângulo $ \theta = 0 $, e então temos:
+
+  \begin{gather}
+    \begin{align}
+      \epsilon_0 \oint \vec{E} \cdot d \vec{A} = \epsilon_0 \oint E \ dA &= q_{\text{enc}}\\ 
+      \epsilon_0 E \oint dA &= q \\
+      \epsilon_0 E (4 \pi r^2) &= q \\
+      E &= \frac{1}{4 \pi \epsilon_0} \frac{q}{r^2}
+    \end{align}
+  \end{gather}
+
+\section*{Um condutor carregado isolado}
+  
+  \paragraph{No que a lei de Gauss nos permite concluir sobre condutores?} Se houver um excesso de carga num condutor isolado, a carga irá se mover inteiramente para a superfície do condutor, e não será encontrada carga excessiva dentro do corpo do condutor.
+
+  \paragraph{O que acontece con um condutor com cavidade interna?} Mesmo se o condutor tiver uma cavidade, a distribuição de cargas ou o padrão do campo elétrico que existe não será alterado, e portanto não haverá fluxo, e logo a cavidade não estará encobrindo carga líquida.
+
+  \paragraph{Como podemos determinar o campo elétrico criado por uma superfície utilizando a lei de Gauss?} Podemos determinar utilizando a parte de fora da superfície do condutor, utilizando uma seção pequena o suficiente para ser considerada plana. Desta forma, imaginando uma superfície cilíndrica Gaussiana perpendicular à superfície, podemos calcular o fluxo, que será diferente de zero somente na face externa do cilindro, sendo $ \phi = EA $. Considerando então que $ q_{\text{enc}} = \sigma A $, temos:
+
+  \begin{gather}
+    \begin{align}
+      \epsilon_0 E A  = \sigma A \\
+      E = \frac{\sigma}{\epsilon_0}
+    \end{align}
+  \end{gather}
+
+\section*{Simetria cilíndrica}
+
+  \paragraph{Como podemos encontrar a magnitude do campo elétrico gerado por uma linha de carga, com densidade de carga uniforme, num raio r do eixo central da linha, utilizando a lei de Gauss?} Se utilizarmos um cilindro Gaussiano concêntrico com raio $r$ e altura $h$, podemos aplicar a lei de Gauss, utilizando a simetria, considerando que o fluxo será dado apenas na superfície lateral do cilindro, e que o campo elétrico será uniforme na superfície inteira, logo:
+
+  \begin{gather}
+    \begin{align}
+      \phi &= EA \cos{\theta} \\
+      \phi &= E (2 \pi r h) \cos{0} = E (2 \pi r h) \\
+      \epsilon_0 \phi &= q_{\text{enc}} \\
+      \epsilon_0 E (2 \pi r h ) &= \lambda h \\
+      E &= \frac{\lambda}{2 \pi \epsilon_0 r}
+    \end{align}
+  \end{gather}
+
+\section*{Simetria planar}
+
+  \paragraph{Como é dado o campo elétrico numa folha infinita não condutora com densidade de carga superficial uniforme?} O campo será perpendicular à folha, e considerando um cilindro que está sendo cortado em sua seção reta pela folha, e que o campo elétrico irá atravessar apenas as faces do cilindro, podemos utilizar a lei de Gauss para obter:
+
+  \begin{gather}
+    \begin{align}
+      \epsilon_0 \oint \vec{E} \cdot d \vec{A} &= q_{\text{enc}} \\
+      \epsilon_0 (EA + EA) &= \sigma A \\
+      E &= \frac{\sigma}{2 \epsilon_0}
+    \end{align}
+  \end{gather}
+
+  \paragraph{O que ocore ao colocarmos duas placas condutoras, com igual magnitude de densidade de carga superficial, uma paralela à outra, com cargas opostas?} O campo elétrico entre elas será direcionado da placa positiva para a placa negativa, e as cargas irão se direcionar para as superfícies internas das placas. Portanto, sendo o campo elétrico gerado por uma placa igual a $E = \frac{\sigma_0}{\epsilon_0}$, o campo elétrico em qualquer ponto entre as placas terá a magnitude de:
+
+  \[
+    E = \frac{2 \sigma_0}{\epsilon_0} = \frac{\sigma}{\epsilon_0}
+  \]
+
+  \paragraph{O que acontece caso uma das placas possua densidade de carga maior que a outra?} Por superposição, encontraremos que a placa com maior carga irá gerar um campo para a direção do sinal da placa com maior carga (para fora se for o positivo, e para dentro se for o negativo), e então um campo oposto na outra placa, com a direção oposta. E o campo entre as placas será dado pela soma dos campos gerados pelas duas placas.

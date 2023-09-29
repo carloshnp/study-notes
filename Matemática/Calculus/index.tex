@@ -1,0 +1,46 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage{setspace}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage[dutch]{babel}
+\usepackage{amsmath, amssymb}
+
+
+% figure support
+\usepackage{import}
+\usepackage{xifthen}
+\pdfminorversion=7
+\usepackage{pdfpages}
+\usepackage{transparent}
+\newcommand{\incfig}[1]{%
+  \def\svgwidth{\columnwidth}
+  \import{./figures/}{#1.pdf_tex}
+}
+
+\pdfsuppresswarningpagegroup=1
+
+\doublespacing
+\begin{document}
+  \section*{Math review}
+  \paragraph*{Conjuntos}
+  \begin{gather}
+    \mathbb{Q} = \left\{ \frac{a}{b} \ | \ a, b \in \mathbb{Z} \neq 0 \right\} \\
+    \mathbb{Z} = \{ \cdots, -3, -2, -1, 0, 1, 2, 3, \cdots \} \\
+    \mathbb{N} = \{0,1,2,3,\cdots\}
+  \end{gather}
+  
+  \paragraph*{Soma e produto de racionais}
+  \begin{gather}
+    \frac{a}{b} + \frac{c}{d} = \frac{ad + bc}{bd} \\
+    \frac{a}{b} \cdot \frac{c}{d} = \frac{ac}{bd}
+  \end{gather}
+
+  \paragraph*{Sinal positivo e estritamente positivo}
+  \begin{gather}
+    \frac{a}{b} \geq 0 \implies a \cdot b \in \mathbb{N} \\
+    a \cdot b \in \mathbb{N} \ \land \ a \neq 0 \implies \frac{a}{b} > 0
+  \end{gather}
+
+\end{document}

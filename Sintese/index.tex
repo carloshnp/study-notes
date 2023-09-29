@@ -1,0 +1,56 @@
+\documentclass[a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage[dutch]{babel}
+\usepackage{amsmath, amssymb}
+
+
+% figure support
+\usepackage{import}
+\usepackage{xifthen}
+\usepackage{chemfig}
+\pdfminorversion=7
+\usepackage{pdfpages}
+\usepackage{transparent}
+\newcommand{\incfig}[1]{%
+  \def\svgwidth{\columnwidth}
+  \import{./figures/}{#1.pdf_tex}
+}
+
+\pdfsuppresswarningpagegroup=1
+
+\begin{document}
+
+\setchemfig{atom style={scale=0.75}} % Ajusta o tamanho dos átomos
+
+\section*{Reação de polimerização do metacrilato de metila}
+
+\begin{center}
+  \schemestart
+      \chemfig{C(-[:90]H)(-[:-90]H)=[@{init}]O}
+          \+
+              \chemfig{C(-[:90]H)(-[:-90]H)(-[:0]OOC[:0]C_6H_5COO)}
+                  \arrow{->[$\Delta$]}
+                      \chemfig{C(-[:90]H)(-[:-90]C_4H_9)(-[:0]OOC[:0]C_6H_5COO)}
+                          \+
+                              \chemfig{C(-[:90]H)(-[:-90]C_6H_5)(-[:0]OOC[:0]C_4H_9)}
+                              \schemestop
+                            \end{center}
+
+                            \section*{Reação com agente de transferência de cadeia (n-dodecil mercaptano)}
+
+                            \begin{center}
+                              \schemestart
+                                  \chemfig{C(-[:90]H)(-[:-90]H)=[@{init}]O}
+                                      \+
+                                          \chemfig{C(-[:90]H)(-[:-90]H)(-[:0]OOC[:0]C_6H_5COO)}
+                                              \arrow{->[$\Delta$]}
+                                                  \chemfig{C(-[:90]H)(-[:-90]C_4H_9)(-[:0]OOC[:0]C_6H_5COO)}
+                                                      \+
+                                                          \chemfig{C(-[:90]H)(-[:-90]C_{12}H_{25})(-[:0]OOC[:0]C_4H_9)}
+                                                          \schemestop
+                                                        \end{center}
+
+\end{document}

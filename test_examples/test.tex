@@ -1,0 +1,104 @@
+\documentclass[10pt]{article}
+\input{./preamble.tex}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+% % Packages for mathematical symbols and notation
+% \usepackage{amsmath}
+% \usepackage{amssymb}
+% \usepackage{amsfonts}
+% \usepackage{amsthm}
+
+% % Customize the page layout (optional)
+% \usepackage[margin=1in]{geometry}
+
+% % Add any other packages you may need here
+
+% % Theorem environments
+% \newtheorem{theorem}{Theorem}
+% \newtheorem{lemma}[theorem]{Lemma}
+% \newtheorem{corollary}[theorem]{Corollary}
+% \newtheorem{definition}{Definition}
+
+% Add any additional theorem environments you may need here
+
+% Document information
+\title{Math Study Notes}
+\author{Your Name}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+
+% Add your introduction and motivation here
+
+\section{Important Definitions}
+
+% Start listing and explaining important definitions here
+\begin{definition}[Important Term 1]
+    This is the definition of important term 1.
+\end{definition}
+
+\begin{definition}[Important Term 2]
+    This is the definition of important term 2.
+\end{definition}
+
+\section{Theorems and Proofs}
+
+% State and prove theorems here
+\begin{theorem}[Pythagorean Theorem]
+    For a right-angled triangle with sides of length $a$, $b$, and $c$, where $c$ is the hypotenuse, the following holds:
+    \[ a^2 + b^2 = c^2 \]
+\end{theorem}
+
+\begin{proof}
+    % Add your proof here
+\end{proof}
+
+\section{Equations and Formulas}
+
+% Showcase important equations and formulas here
+\begin{align*}
+    f(x) & = x^2 + 2x + 1     \\
+    g(x) & = \frac{1}{x}      \\
+    h(x) & = \sqrt{x^2 + y^2}
+\end{align*}
+
+\section{Examples and Exercises}
+
+\begin{center}
+    \begin{tikzpicture}
+        \begin{axis}[
+                axis lines = middle,
+                xlabel = \(x\),
+                ylabel = \(h(x)\), % <- Add a closing brace here
+                xmin = -5, xmax = 1,
+                ymin = -3, ymax = 3,
+                domain = -5:5, % Set the domain for the plot
+                samples = 100 % Increase the number of samples for a smoother curve
+            ]
+            \addplot [blue, smooth] {1/(x+2)};
+            % Add data points
+            \addplot [only marks, mark=*, mark options={red}] coordinates {
+                (-3, -1)
+                (-1, 1)
+                (0, 0.5)
+              };
+        \end{axis}
+    \end{tikzpicture}
+\end{center}
+
+% Present math examples and exercises for practice
+\subsection{Example 1}
+% Add your example here
+
+\subsection{Exercise 1}
+% Add your exercise here
+
+\section{Conclusion}
+
+% Summarize your notes and conclude your study session here
+
+\end{document}

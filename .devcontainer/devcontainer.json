@@ -1,0 +1,4 @@
+{
+    "image": "ubuntu_v1",
+    "forwardPorts": [3000]
+}

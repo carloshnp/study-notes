@@ -1,0 +1,10 @@
+\contentsline {paragraph}{Question 1}{1}{}%
+\contentsline {paragraph}{Question 2}{1}{}%
+\contentsline {subparagraph}{Par 1}{1}{}%
+\contentsline {subparagraph}{Par 2}{2}{}%
+\contentsline {subparagraph}{Par 3}{2}{}%
+\contentsline {paragraph}{Por qual razão uma partícula atua com uma força elétrica em outra partícula à distância?}{2}{}%
+\contentsline {paragraph}{Qual a diferença entre um campo escalar e um campo vetorial?}{2}{}%
+\contentsline {paragraph}{Como se define o campo elétrico?}{2}{}%
+\contentsline {paragraph}{Como os vetores do campo elétrico e da força eletrostática se relacionam?}{2}{}%
+\contentsline {paragraph}{Como representamos o campo elétrico (esquematicamente)?}{2}{}%
