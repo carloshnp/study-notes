@@ -1,24 +1,12 @@
-\documentclass[a4paper]{article}
+\documentclass[a4paper]{report}
 
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{textcomp}
-\usepackage[dutch]{babel}
-\usepackage{amsmath, amssymb}
-
-
-% figure support
-\usepackage{import}
-\usepackage{xifthen}
-\pdfminorversion=7
-\usepackage{pdfpages}
-\usepackage{transparent}
-\newcommand{\incfig}[1]{%
-  \def\svgwidth{\columnwidth}
-  \import{./figures/}{#1.pdf_tex}
-}
-
-\pdfsuppresswarningpagegroup=1
+\input{../preamble.tex}
+\title{Físico-Química II}
 
 \begin{document}
+  \maketitle
+  % start lectures
+  \input{./chapter1.tex}
+  % end lectures
+
 \end{document}

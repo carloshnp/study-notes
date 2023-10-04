@@ -7,13 +7,15 @@
 \usepackage{float}
 \usepackage{booktabs}
 \usepackage{enumitem}
-
+\usepackage{geometry}
+\geometry{margin=0.7in}
+\usepackage{titlesec}
 \pdfminorversion=7
 \usepackage{parskip}
 \usepackage{emptypage}
 \usepackage{subcaption}
 \usepackage{multicol}
-\usepackage{xcolor}
+\usepackage[usenames,dvipsnames]{xcolor}
 % Math stuff
 \usepackage{amsmath, amsfonts, mathtools, amsthm, amssymb}
 % Fancy script capitals
@@ -29,54 +31,142 @@
 \newcommand\Q{\ensuremath{\mathbb{Q}}}
 \newcommand\C{\ensuremath{\mathbb{C}}}
 
+% correct
+\definecolor{correct}{HTML}{009900}
+\newcommand\correct[2]{\ensuremath{\:}{\color{red}{#1}}\ensuremath{\to }{\color{correct}{#2}}\ensuremath{\:}}
+\newcommand\green[1]{{\color{correct}{#1}}}
+
 % si unitx
 \usepackage{siunitx}
 \sisetup{locale = FR}
 
-% Environments
+% theorems
 \makeatother
-% For box around Definition, Theorem, \ldots
-\usepackage{mdframed}
+\usepackage{thmtools}
+\usepackage[framemethod=TikZ]{mdframed}
 \mdfsetup{skipabove=1em,skipbelow=0em}
-\theoremstyle{definition}
-\newmdtheoremenv[nobreak=true]{definitie}{Definitie}
-\newmdtheoremenv[nobreak=true]{eigenschap}{Eigenschap}
-\newmdtheoremenv[nobreak=true]{gevolg}{Gevolg}
-\newmdtheoremenv[nobreak=true]{lemma}{Lemma}
-\newmdtheoremenv[nobreak=true]{propositie}{Propositie}
-\newmdtheoremenv[nobreak=true]{stelling}{Stelling}
-\newmdtheoremenv[nobreak=true]{wet}{Wet}
-\newmdtheoremenv[nobreak=true]{postulaat}{Postulaat}
-\newmdtheoremenv{conclusie}{Conclusie}
-\newmdtheoremenv{toemaatje}{Toemaatje}
-\newmdtheoremenv{vermoeden}{Vermoeden}
-\newtheorem*{herhaling}{Herhaling}
-\newtheorem*{intermezzo}{Intermezzo}
-\newtheorem*{notatie}{Notatie}
-\newtheorem*{observatie}{Observatie}
-\newtheorem*{oef}{Oefening}
-\newtheorem*{opmerking}{Opmerking}
-\newtheorem*{praktisch}{Praktisch}
-\newtheorem*{probleem}{Probleem}
-\newtheorem*{terminologie}{Terminologie}
-\newtheorem*{toepassing}{Toepassing}
-\newtheorem*{uovt}{UOVT}
-\newtheorem*{vb}{Voorbeeld}
-\newtheorem*{vraag}{Vraag}
 
-\newmdtheoremenv[nobreak=true]{definition}{Definition}
-\newtheorem*{eg}{Example}
+
+\theoremstyle{definition}
+
+\declaretheoremstyle[
+    headfont=\bfseries\sffamily\color{ForestGreen!70!black}, bodyfont=\normalfont,
+    mdframed={
+        linewidth=2pt,
+        rightline=false, topline=false, bottomline=false,
+        linecolor=ForestGreen, backgroundcolor=ForestGreen!5,
+    }
+]{thmgreenbox}
+
+\declaretheoremstyle[
+    headfont=\bfseries\sffamily\color{NavyBlue!70!black}, bodyfont=\normalfont,
+    mdframed={
+        linewidth=2pt,
+        rightline=false, topline=false, bottomline=false,
+        linecolor=NavyBlue, backgroundcolor=NavyBlue!5,
+    }
+]{thmbluebox}
+
+\declaretheoremstyle[
+    headfont=\bfseries\sffamily\color{NavyBlue!70!black}, bodyfont=\normalfont,
+    mdframed={
+        linewidth=2pt,
+        rightline=false, topline=false, bottomline=false,
+        linecolor=NavyBlue
+    }
+]{thmblueline}
+
+\declaretheoremstyle[
+    headfont=\bfseries\sffamily\color{RawSienna!70!black}, bodyfont=\normalfont,
+    mdframed={
+        linewidth=2pt,
+        rightline=false, topline=false, bottomline=false,
+        linecolor=RawSienna, backgroundcolor=RawSienna!5,
+    }
+]{thmredbox}
+
+\declaretheoremstyle[
+    headfont=\bfseries\sffamily\color{RawSienna!70!black}, bodyfont=\normalfont,
+    numbered=no,
+    mdframed={
+        linewidth=2pt,
+        rightline=false, topline=false, bottomline=false,
+        linecolor=RawSienna, backgroundcolor=RawSienna!1,
+    },
+    qed=\qedsymbol
+]{thmproofbox}
+
+\declaretheoremstyle[
+    headfont=\bfseries\sffamily\color{NavyBlue!70!black}, bodyfont=\normalfont,
+    numbered=no,
+    mdframed={
+        linewidth=2pt,
+        rightline=false, topline=false, bottomline=false,
+        linecolor=NavyBlue, backgroundcolor=NavyBlue!1,
+    },
+]{thmexplanationbox}
+
+% \declaretheoremstyle[headfont=\bfseries\sffamily, bodyfont=\normalfont, mdframed={ nobreak } ]{thmgreenbox}
+% \declaretheoremstyle[headfont=\bfseries\sffamily, bodyfont=\normalfont, mdframed={ nobreak } ]{thmredbox}
+% \declaretheoremstyle[headfont=\bfseries\sffamily, bodyfont=\normalfont]{thmbluebox}
+% \declaretheoremstyle[headfont=\bfseries\sffamily, bodyfont=\normalfont]{thmblueline}
+% \declaretheoremstyle[headfont=\bfseries\sffamily, bodyfont=\normalfont, numbered=no, mdframed={ rightline=false, topline=false, bottomline=false, }, qed=\qedsymbol ]{thmproofbox}
+% \declaretheoremstyle[headfont=\bfseries\sffamily, bodyfont=\normalfont, numbered=no, mdframed={ nobreak, rightline=false, topline=false, bottomline=false } ]{thmexplanationbox}
+
+\declaretheorem[style=thmgreenbox, name=Definition]{definition}
+\declaretheorem[style=thmbluebox, numbered=no, name=Example]{eg}
+\declaretheorem[style=thmredbox, name=Proposition]{prop}
+\declaretheorem[style=thmredbox, name=Theorem]{theorem}
+\declaretheorem[style=thmredbox, name=Lemma]{lemma}
+\declaretheorem[style=thmredbox, numbered=no, name=Corollary]{corollary}
+
+\declaretheorem[style=thmproofbox, name=Proof]{replacementproof}
+\renewenvironment{proof}[1][\proofname]{\vspace{-10pt}\begin{replacementproof}}{\end{replacementproof}}
+
+
+\declaretheorem[style=thmexplanationbox, name=Proof]{tmpexplanation}
+\newenvironment{explanation}[1][]{\vspace{-10pt}\begin{tmpexplanation}}{\end{tmpexplanation}}
+
+\declaretheorem[style=thmblueline, numbered=no, name=Remark]{remark}
+\declaretheorem[style=thmblueline, numbered=no, name=Note]{note}
+
+\newtheorem*{uovt}{UOVT}
 \newtheorem*{notation}{Notation}
 \newtheorem*{previouslyseen}{As previously seen}
-\newtheorem*{remark}{Remark}
-\newtheorem*{note}{Note}
 \newtheorem*{problem}{Problem}
 \newtheorem*{observe}{Observe}
 \newtheorem*{property}{Property}
 \newtheorem*{intuition}{Intuition}
-\newmdtheoremenv[nobreak=true]{prop}{Proposition}
-\newmdtheoremenv[nobreak=true]{theorem}{Theorem}
-\newmdtheoremenv[nobreak=true]{corollary}{Corollary}
+
+
+\usepackage{etoolbox}
+\AtEndEnvironment{vb}{\null\hfill$\diamond$}%
+\AtEndEnvironment{intermezzo}{\null\hfill$\diamond$}%
+% \AtEndEnvironment{opmerking}{\null\hfill$\diamond$}%
+
+% http://tex.stackexchange.com/questions/22119/how-can-i-change-the-spacing-before-theorems-with-amsthm
+\makeatletter
+% \def\thm@space@setup{%
+%   \thm@preskip=\parskip \thm@postskip=0pt
+% }
+
+\newcommand{\oefening}[1]{%
+    \def\@oefening{#1}%
+    \subsection*{Oefening #1}
+}
+
+\newcommand{\suboefening}[1]{%
+    \subsubsection*{Oefening \@oefening.#1}
+}
+
+\newcommand{\exercise}[1]{%
+    \def\@exercise{#1}%
+    \subsection*{Exercise #1}
+}
+
+\newcommand{\subexercise}[1]{%
+    \subsubsection*{Exercise \@exercise.#1}
+}
 
 % End example and intermezzo environments with a small diamond (just like proof
 % environments end with a small square)
@@ -109,8 +199,8 @@
 }
 
 % These are the fancy headers
-\usepackage{fancyhdr}
-\pagestyle{fancy}
+% \usepackage{fancyhdr}
+% \pagestyle{fancy}
 
 % LE: left even
 % RO: right odd

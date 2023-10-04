@@ -1,0 +1,190 @@
+\lecture{1}{}{Fenômenos de superfície}
+
+\begin{multicols*}{2}
+
+  \section*{Revisão de termodinâmica}
+
+  \paragraph{ }
+
+  \begin{definition}[1ª Lei - Conservação de energia]
+    Em um processo termodinâmico fechado, a alteração da energia interna depende do calor acumulado pelo sistema e a alteração do trabalho realizado.
+    \begin{gather}
+      dU = dq + dW
+    \end{gather}
+  \end{definition}
+
+  \begin{corollary}
+    Para trabalhos reversíveis de volume, temos que:
+    \begin{gather}
+      dW = -p dV \\
+      dU = dq - p dV
+    \end{gather}
+    Para processos reversíveis, temos que:
+    \begin{gather}
+      dq = TdS \\
+      dU = TdS - pdV \ \text{(equação fundamental)}
+    \end{gather}
+  \end{corollary}
+  
+  Portanto a energia interna de um sistema fechado é função da entropia (distribuição de energia no sistema) e do volume (distância média entre as partículas), ou seja:
+  \begin{theorem}[Energia interna como função da entropia e volume]
+    \begin{gather}
+      U = U(S,V) \\
+      dU = \left( \frac{\partial U}{\partial S} \right)_V dS + \left( \frac{\partial U}{\partial V}  \right)_S dV \\
+      \left( \frac{\partial U}{\partial S}  \right)_V = T \ , \ \left( \frac{\partial U}{\partial V}  \right)_S = -p
+    \end{gather}  
+  \end{theorem}
+
+  Em sistemas abertos, há a troca de massa com as vizinhanças, portanto a energia pode ser alterada a partir da variação das composições das espécies, onde $n_i$ é o número de moles do sistema.
+  \begin{theorem}[Energia interna em sistemas abertos como função]
+    \begin{gather}
+      U = U(S,V,n_1,n_2, \cdots)    
+    \end{gather}
+  \end{theorem}
+
+  A entalpia também pode ser definida como função:
+  \begin{definition}[Entalpia como função]
+    Pela definição de entalpia, temos:
+    \begin{gather}
+      H = U + pV \\
+      dH = dU + pdV + Vdp
+    \end{gather}
+    Substituindo a energia interna, temos:
+    \begin{gather}
+      dH = TdS - pdV + pdV + Vdp \\
+      dH = TdS + Vdp \ \text{(equação fundamental)}
+    \end{gather}
+    Portanto, temos a entalpia em função de:
+    \begin{gather}
+      H = H(S,p) \ \text{(sistemas fechados)} \\
+      H = H(S,p,n_1,n_2, \cdots) \ \text{(sistemas abertos)}
+    \end{gather}
+  \end{definition}
+
+  A energia livre de Gibbs também pode ser definida da mesma forma:
+
+  \begin{definition}[Energia livre de Gibbs como função]
+    Pela definição, temos:
+    \begin{gather}
+      G = H - TS \\
+      dG = dH - TdS - SdT \\
+    \end{gather}
+    Substituindo a entalpia, temos:
+    \begin{gather}
+      dG = TdS + Vdp - TdS - SdT \\
+      dG = -SdT + Vdp \ \text{(equação fundamental)}
+    \end{gather}
+    Portanto, temos a energia de Gibbs em função de:
+    \begin{gather}
+      G = G(T,p) \ \text{(sistemas fechados)} \\
+      G = G(T,p,n_1,n_2,\cdots) \ \text{(sistemas abertos)}
+    \end{gather}
+  \end{definition}
+
+  Com a variação dos moles das espécies presentes, temos que a diferencial total da energia livre de Gibbs é:
+  \begin{definition}[Diferencial da energia de Gibbs com variação dos moles]
+    \begin{gather}
+      \begin{align}
+        dG = & \left( \frac{\partial G}{\partial T}  \right)_{p, n_1, n_2, \cdots} dT + \\
+             & \left( \frac{\partial G}{\partial p}  \right)_{T, n_1, n_2, \cdots} dp + \\
+             & \left( \frac{\partial G}{\partial n_1}  \right)_{T, p, n_2, \cdots} dn_1 + \\
+             & \left( \frac{\partial G}{\partial n_2}  \right)_{T, p, n_1, \cdots} dn_2 + \cdots
+      \end{align}
+    \end{gather}    
+  \end{definition}
+
+  \begin{corollary}
+    Se $dn_i = 0$, a expressão se torna:
+    \begin{gather}
+      dG = \left( \frac{\partial G}{\partial T}  \right)_{p, n_1, n_2, \cdots} dT + \left( \frac{\partial G}{\partial p}  \right)_{T, n_1, n_2, \cdots} dp
+    \end{gather}
+    Assim, temos que:
+    \begin{gather}
+      \left( \frac{\partial G}{\partial T}  \right)_{p, n_1, n_2, \cdots} = -S \\
+      \left( \frac{\partial G}{\partial p}  \right)_{T, n_1, n_2, \cdots} = V
+    \end{gather}
+    Portanto, podemos reescrever a equação de Gibbs na forma diferencial como: 
+    \begin{gather}
+      \begin{align}
+        dG = & -SdT + Vdp + \\
+             & \left( \frac{\partial G}{\partial n_1}  \right)_{T, p, n_2, \cdots} dn_1 + \\
+             & \left( \frac{\partial G}{\partial n_2}  \right)_{T, p, n_1, \cdots} dn_2 + \cdots
+      \end{align}
+    \end{gather}
+  \end{corollary}
+
+  \begin{theorem}[Potencial químico]
+    Se definirmos a variação da energia livre de Gibbs com o número de moles como sendo o potencial químico, temos que:
+    \begin{gather}
+      \left( \frac{\partial G}{\partial n_1}  \right)_{T, p, n_2, \cdots} = \mu_1 \\
+      \left( \frac{\partial G}{\partial n_2}  \right)_{T, p, n_1, \cdots} = \mu_2
+    \end{gather}
+    E portanto, para um sistema de composição variável:
+    \begin{gather}
+      \begin{align}
+        dG &= -SdT + Vdp + \mu_1 dn_1 + \mu_2 dn_2 + \cdots \\
+           &= -SdT + Vdp + \sum \mu_i dn_i
+      \end{align}
+    \end{gather}
+  \end{theorem}
+  \begin{remark}
+    Se $p$ e $T$ são mantidas constante, a variação de $G$ indica se o sistema está em equilíbrio, ou sofrendo transformação espontânea, ou sofrendo transformação não-espontânea.
+  \end{remark}
+
+  Considerando $p$ e $T$ constantes, e retirando $dn$ moles de $a$ e introduzindo $dn$ moles no ponto $b$, temos duas variações na energia de Gibbs:
+  \begin{theorem}[Potencial químico e transporte de massa]
+    \begin{gather}
+      dG^a = - \mu^a dn \ (\Delta G < 0) \\
+      dG^b = + \mu^b dn \ (\Delta G > 0)
+    \end{gather}
+    Portanto, o potencial químico está associado ao transporte de massa da região de maior potencial químico para a região de menor potencial químico.
+    Para que um sistema de composição variável esteja em equilíbrio, é necessário que, além da pressão e temperatura constantes, os potenciais químicos dos componentes do sistema também fiquem constantes.
+  \end{theorem}
+
+  \begin{definition}[Equação de Gibbs-Duhem]
+    Considerando um sistema binário com temperatura e pressão constantes, temos:
+    \begin{gather}
+      dG = -SdT + Vdp + \mu_1 dn_1 + \mu_2 dn_2 \\
+      dG = \mu_1 dn_1 + \mu_2 dn_2 \\
+      G = \mu_1 n_1 + \mu_2 n_2
+    \end{gather}
+    Considerando a diferencial da energia de Gibbs, temos que:
+    \begin{gather}
+      dG = \mu_1 dn_1 + n_1 d\mu_1 + \mu_2 dn_2 + n_2 d\mu_2 \\
+      n_1 d\mu_1 + n_2 d\mu_2 = 0 \\
+      \sum n_i d\mu_i = 0 \ \text{(equação de Gibbs-Duhem)}
+    \end{gather}
+    Portanto, a equação de Gibbs-Duhem nos diz que os potenciais químicos de componentes de uma mistura não podem variar de forma independente.
+  \end{definition}
+
+  \section*{Fenômenos de Interface}
+
+  \paragraph{ } Para definirmos os fenômenos interfaciais, precisamos entender a variação de energia que ocorre na superfície. Portanto, é fundamental definirmos a energia superficial de um sistema. Desta forma, podemos relacionar a energia superficial com o excesso de concentração dos solutos e com o potencial químico, o que nos permite explicar o conceito de adsorção.
+
+  \begin{definition}[Energia superficial]
+    Para um sistema aberto de composição variável, $G = G(T,p,n_i)$. Já para a superfície de uma solução, $G^{A}=G(T,p,n_i,A)$, onde $A$ é a área da superfície. Portanto, para aumentar a superfície, temos que levar moléculas do seio da solução para a superfície, e como esse não é um processo espontâneo, precisamos fornecer energia para o sistema. Dessa forma, temos que:
+    \begin{gather}
+      \begin{align}
+        dG^{A} = & \left( \frac{\partial G}{\partial n_1}  \right)_{T,p,n_2, \cdots,A} dn_1 + \\
+               & \left( \frac{\partial G}{\partial n_2}  \right)_{T,p,n_1,\cdots,A} dn_2 + \\
+               & \cdots + \\
+               & \left( \frac{\partial G}{\partial A} \right)_{T,p,n_1} dA
+      \end{align}
+    \end{gather}
+
+    \begin{gather}
+      \begin{aligned}
+        dG^{A} = \mu_1^{A} dn_1^{A} + \mu_2^{A} dn_2^{A} + \cdots + \gamma dA 
+      \end{aligned}
+    \end{gather}
+    Desta forma, temos $\gamma$, que é a energia superficial, ou seja, a energia por unidade de área da superfície. Portanto:
+    \begin{gather}
+      \gamma = \frac{E}{A} = \frac{F d}{d^2} = \frac{F}{d}
+    \end{gather}
+    Logo, $\gamma$ é dada por $erg/cm^2$ ou $dinas/cm$. 
+  \end{definition}
+  \begin{remark}
+    Quando exprimimos $\gamma$ como energia por área, chamamos de \textbf{energia superficial}, e quando exprimimos $\gamma$ como força por comprimento chamamos de \textbf{tensão superficial}.
+  \end{remark}
+
+\end{multicols*}
