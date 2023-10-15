@@ -162,7 +162,7 @@
   \paragraph{ } Para definirmos os fenômenos interfaciais, precisamos entender a variação de energia que ocorre na superfície. Portanto, é fundamental definirmos a energia superficial de um sistema. Desta forma, podemos relacionar a energia superficial com o excesso de concentração dos solutos e com o potencial químico, o que nos permite explicar o conceito de adsorção.
 
   \begin{definition}[Energia superficial]
-    Para um sistema aberto de composição variável, $G = G(T,p,n_i)$. Já para a superfície de uma solução, $G^{A}=G(T,p,n_i,A)$, onde $A$ é a área da superfície. Portanto, para aumentar a superfície, temos que levar moléculas do seio da solução para a superfície, e como esse não é um processo espontâneo, precisamos fornecer energia para o sistema. Dessa forma, temos que:
+    Para um sistema aberto de composição variável, $G = G(T,p,n_i)$. Já para a superfície de uma solução, $G^{A}=G(T,p,n_i,A)$, onde $A$ é a área da superfície. Portanto, para aumentar a superfície, temos que levar moléculas do seio da solução para a superfície, e como esse não é um processo espontâneo, precisamos fornecer energia para o sistema. Dessa forma, com temperatura e pressão constantes, temos que:
     \begin{gather}
       \begin{align}
         dG^{A} = & \left( \frac{\partial G}{\partial n_1}  \right)_{T,p,n_2, \cdots,A} dn_1 + \\
@@ -186,5 +186,65 @@
   \begin{remark}
     Quando exprimimos $\gamma$ como energia por área, chamamos de \textbf{energia superficial}, e quando exprimimos $\gamma$ como força por comprimento chamamos de \textbf{tensão superficial}.
   \end{remark}
+
+  \begin{definition}[Isoterma de adsorção de Gibbs]
+    Definimos a variação da energia superficial acima. Se definirmos uma solução binária, temos como definir equações para a superfície e para o seio da solução:
+    \begin{gather}
+      dG^A = \mu_1^A dn_1^A + \mu_2^A dn_2^A + \gamma dA \\
+      dG^A = \mu_1^A dn_1^A + n_1^A d\mu_1^A + \mu_2^A dn_2^A \\ + n_1^A d \mu_1^A + \gamma dA + A d \gamma \\
+      n_1^A d \mu_1^A + n_2^A d \mu_2^A + A d\gamma = 0 \\ 
+      \text{(equação para a superfície)} \\
+      n_1 d\mu_1 + n_2 d \gamma_2 = 0 \\ 
+      \text{(equação para o seio da solução)}
+    \end{gather}    
+    Para a equação do seio da solução, podemos escrever que:
+    \begin{gather}
+      d\mu_1 = - \frac{n_2}{n_1} d\mu_2
+    \end{gather}
+    Se o sistema está em equilíbrio, então:
+    \begin{gather}
+      \mu_1 = \mu_1^A \\
+      \mu_2 = \mu_2^A \\
+      d\mu_1^A = d \mu_1 = \frac{n_2}{n_1} d \mu_2 \\
+      d\mu_2^A = d\mu_2
+    \end{gather}
+    E utilizando a equação para a superfície, e substituindo os termos, temos que:
+    \begin{gather}
+      n_1^A d \mu_1^A + n_2^A d \mu_2^A + A d\gamma = 0 \\ 
+      n_1^A = \left( - \frac{n_2}{n_1} d\mu_2 \right) + n_2^A d \mu_2 + A d \gamma = 0 \\
+      \left( n_2^A - \frac{n_2 n_1^A}{n_1} \right) d \mu_2 = - A d \gamma \\
+      \frac{\left( n_2^A - \frac{n_2 n_1^A}{n_1} \right)}{A} = - \frac{d \gamma}{d \mu_2}
+    \end{gather}
+    Portanto, definimos a Isoterma de adsorção de Gibbs ($\Gamma$) como o excesso de concentração do soluto por unidade de superfície:
+    \begin{gather}
+      \Gamma_2 = \frac{\left( n_2^A - \frac{n_2 n_1^A}{n_1} \right)}{A} \\
+      \Gamma_2 = - \frac{d\gamma}{d\mu_2} \\
+      n_2^A - \frac{n_1^An_2}{n_1} > 0 \\
+      n_2^A > \frac{n_1^A n_2}{n_1} \\
+      \frac{n_2^A}{n_1^A} > \frac{n_2}{n_1}
+    \end{gather}
+  \end{definition}
+
+  Sendo $n_1$ o solvente e $n_2$ o soluto, exstem três casos para a isoterma de Gibbs $\Gamma$:
+  \begin{corollary}
+    Quando $\Gamma_2$ é positivo:
+    \begin{gather}
+      \Gamma_2 > 0 \Rightarrow n_2^A > \left( \frac{n_1^A n_2}{n_1} \right)
+    \end{gather}
+    Ou seja, existe mais soluto na superfície do que no seio da solução, então a adsorção é positiva. De forma análoga, existe menos solvente na superfície.
+
+    Quando $\Gamma_2$ é negativo:
+    \begin{gather}
+      \Gamma_2 < 0 \Rightarrow n_2^A < \left( \frac{n_1^A n_2}{n_1} \right)
+    \end{gather}
+    Ou seja, existe menos soluto na superfície do que no seio da solução, então a adsorção é negativa.
+
+    Quando $\Gamma_2$ é nulo:
+    \begin{gather}
+      n_2^A = \left( \frac{n_1^A n_2}{n_1}
+    \end{gather}
+    Ou seja, não existe diferenças de concentração entre a superfície e o seio da solução. Logo, não existe adsorção.
+  \end{corollary}
+
 
 \end{multicols*}
