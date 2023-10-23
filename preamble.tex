@@ -8,14 +8,16 @@
 \usepackage{booktabs}
 \usepackage{enumitem}
 \usepackage{geometry}
-\geometry{margin=1in}
+\geometry{margin=0.7in}
 \usepackage{titlesec}
 \pdfminorversion=7
 \usepackage{parskip}
+\setlength{\parskip}{6pt}
 \usepackage{emptypage}
 \usepackage{subcaption}
 \usepackage{multicol}
-\usepackage{biblatex}
+% \usepackage{parskip}
+% \usepackage{biblatex}
 \usepackage[usenames,dvipsnames]{xcolor}
 % Math stuff
 \usepackage{amsmath, amsfonts, mathtools, amsthm, amssymb}
@@ -45,8 +47,7 @@
 \makeatother
 \usepackage{thmtools}
 \usepackage[framemethod=TikZ]{mdframed}
-\mdfsetup{skipabove=1em,skipbelow=0em}
-
+\mdfsetup{skipabove=1em,skipbelow=0em,everyline=true}
 
 \theoremstyle{definition}
 
@@ -147,9 +148,9 @@
 
 % http://tex.stackexchange.com/questions/22119/how-can-i-change-the-spacing-before-theorems-with-amsthm
 \makeatletter
-% \def\thm@space@setup{%
-%   \thm@preskip=\parskip \thm@postskip=0pt
-% }
+\def\thm@space@setup{%
+  \thm@preskip=\parskip \thm@postskip=0pt
+}
 
 \newcommand{\oefening}[1]{%
     \def\@oefening{#1}%
@@ -221,7 +222,7 @@
 % Todonotes and inline notes in fancy boxes
 \usepackage{todonotes}
 \usepackage{tcolorbox}
-
+% \usepackage[breakable, theorems, skins]{tcolorbox}
 % Make boxes breakable
 \tcbuselibrary{breakable}
 

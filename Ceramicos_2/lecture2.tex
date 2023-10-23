@@ -1,3 +1,66 @@
-\lecture{2}{}{}
+\lecture{2}{}{Mecânica de fratura linear elástica}
 
+\begin{multicols*}{2}
 
+    \section*{Falha}
+
+    \begin{itemize}
+        \item Quais são as origens das falhas estruturais em materiais cerâmicos?
+    \end{itemize}
+
+    \section*{Técnicas de projeto convencional}
+
+    \begin{itemize}
+        \item Tensão aplicada $\rightarrow$ comparação de defeitos com tenacidade à fratura
+        \item Tipos de fratura
+        \begin{itemize}
+            \item fratura linear elástica (independente do tempo)
+            \item fratura elasto-plástica (não linear)
+            \item comportamentos dinâmicos, viscoelásticos, viscoplásticos (dependentes do tempo)
+        \end{itemize}
+        \item Curva de tenacidade à fratura vs. tensão à falha
+        \item Quais são os materiais de acordo com o seu comportamento de fratura típico?
+    \end{itemize}
+
+    \section*{Mecânica de fratura}
+
+    \begin{itemize}
+        \item Similitude - comportamento igual da trinca na estrutura e no corpo de prova
+        \item Efeito da concentração de tensão - toda descontinuidade geométrica é um concentrador de tensões - para raios de curvatura finitos
+        \item Critério de energia de fratura - para nuclear ou crescer a trinca, é necessário que a energia potencial acumulada seja igual à energia necessária para criar as novas superfícies de trinca (duas)
+    \end{itemize}
+
+    \begin{gather}
+        \frac{dE}{dA} = \frac{d \Pi}{dA} + \frac{dW_s}{dA} = 0 \\
+        \Pi = \Pi_0 - \frac{\pi \sigma^2 a^2 B}{E} \\
+        W_s = 2 \times 2a \times B \times \gamma_s = 4a B \gamma_s \\
+        \sigma_f = \left( \frac{2 E \gamma_s}{\pi a} \right)^{\frac{1}{2}}
+    \end{gather}
+
+    \section*{Análise de tensões na ponta da trinca}
+
+    \begin{itemize}
+        \item Três modos de carregamento que podem ser submetidas num corpo que contém uma trinca - modo I, II e III
+        \item Tensão principal (tensão trativa) - tensão de cisalhamento igual a zero ($\sigma_I \rightarrow \tau = 0$) no plano que ela atua
+        \item Diferentes usos de corpos de prova - depende do comportamento da propagação da trinca (multiplicador)
+        \item Trincas de superfície são 12\% piores que em trincas passantes num corpo de prova ($K_I = 1,12 Y \sigma \sqrt{\pi a}$), de acordo com condições de contorno (ver trincas de aresta nos slides)
+    \end{itemize}
+    \begin{gather}
+        K_I = \frac{P}{B \sqrt{W}} f \left( \frac{a}{W} \right)
+    \end{gather}
+
+    \section*{Efeito da espessura}
+    \begin{itemize}
+        \item Tensão plana vs. Deformação plana
+        \item Círculo de Mohr - Tensão-deformação em materiais com espessura infinitesimal e com espessura maior que zero
+        \item Menor espessura - deformação plana; maior espessura - tensão plana
+        \item $K$ é o critério de falha do material
+    \end{itemize}
+    \begin{gather}
+        a,B,(W-a) \geq 2,5 \left( \frac{K_{IC}}{\sigma_{LE}} \right)^2
+    \end{gather}
+    \begin{itemize}
+        \item Taxa de liberação de energia
+    \end{itemize}
+
+\end{multicols*}

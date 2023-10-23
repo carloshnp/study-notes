@@ -1,0 +1,198 @@
+\lecture{2}{}{Introdução ao equilíbrio químico}
+
+\section*{Cinética e equilíbrio químico}
+
+\paragraph*{ } Toda reação química ocorre numa velocidade finita que tende a alcançar uma posição final de equilíbrio. Estas dividem-se em duas zonas:
+
+\begin{itemize}
+    \item Uma região cinética, que depende do tempo na qual o sistema se aproxima do equilíbrio
+    \item Uma região de equilíbrio (estática), que surge quando todos os processos do sistema alcançam o equilíbrio.
+\end{itemize}
+
+\begin{definition}[Velocidade da reação]
+    A velocidade da reação é dada como a quantidade de mols consumidos ou formados por unidade de volume e unidade de tempo. Ela depende das concentrações das espécies reagentes, das afinidades químicas e da temperatura (que incide positivamente sobre o número de colisões entre as espécies). A reação irreversível abaixo, possui uma velocidade de reação dada pela derivada das concentrações das espécies em relação ao tempo:
+    \begin{gather}
+        A + B \rightarrow C + D \\
+        v = -\frac{d[A]}{dt} = -\frac{d[B]}{dt} = \frac{d[C]}{dt} = \frac{d[D]}{dt}
+    \end{gather}
+    O sinal negativo das derivadas nas espécies $A$ e $B$ é devido ao seu consumo a medida que a reação progride. Assim, a equação de velocidade é dada como:
+    \begin{gather}
+        v = -\frac{d[A]}{dt} = -\frac{d[B]}{dt} = k_1[A][B]
+    \end{gather}
+    Temos que $k_1$ é a constante de velocidade. Para uma reação polimolecular, temos:
+    \begin{gather}
+        a \ A + b \ B \rightarrow c \ C + d \ D \\
+        v = -\frac{1}{a} \frac{d[A]}{dt} = -\frac{1}{b} \frac{d[B]}{dt} = k_1[A]^a [B]^b
+    \end{gather}
+\end{definition}
+
+A soma dos expoentes das concentrações é conhecida como \textbf{ordem de reação global}, enquanto o expoente de cada uma das concentrações é conhecida como \textbf{ordem parcial de reação}.
+
+\begin{definition}[Ordem das reações reversíveis]
+    Dado que a maioria das reações são reversíveis, temos uma velocidade de reação direta, correspondente à formação dos produtos, e uma velocidade de reação inversa, correspondente ao consumo dos reagentes:
+    \begin{gather}
+        a \ A + b \ B \leftrightarrow c \ C + d \ D \\
+        V_{\text{direta}} = k_1 [A]^a[B]^b \\
+        V_{\text{inversa}} = k_2 [C]^c [D]^d
+    \end{gather}
+\end{definition}
+
+Desta forma, podemos definir o equilíbrio químico:
+
+\begin{definition}[Equilíbrio químico]
+    A velocidade direta de reação é muito maior que a velocidade de reação inversa no início da reação, porém elas tendem a se igualar, alcançando o equilíbrio químico. Este equilíbrio é dinâmico, pois ele é dado pela formação e conversão simultânea de produtos e reagentes.
+    \begin{gather}
+        V_{\text{direta}} = V_{\text{inversa}} \\
+        k_1[A]^a[B]^b = k_2[C]^c[D]^d \\
+        K = \frac{k_1}{k_2} = \frac{[C]^{c}[D]^{d}}{[A]^{a}[B]^b}
+    \end{gather}
+
+    O valor $K$ corresponde à \textbf{constante de equilíbrio}, que depende apenas da temperatura.
+\end{definition}
+
+\section*{Atividade e coeficiente de atividade}
+
+\paragraph*{ } A expressão da constante de equilíbrio acima prevê que a razão das concentrações dos produtos e dos reagentes é um valor constante em um sistema em equilíbrio para uma reação química específica. A expressão considera as moléculas das substâncias reagentes como partículas independentes sem interação entre elas, o que ocorre com moléculas sem carga e em baixas concentrações.
+
+Consequentemente, a constante de equilíbrio definida só será verdadeira em condições onde as partículas estão suficientemente afastadas umas das outras para que sua interação seja mínima e desprezível, ou seja, em concentrações muito diluídas.
+
+\begin{definition}[Atividade das espécies em equilíbrio]
+    Levando em consideração os aspectos citados, definimos a atividade $a_i$, que é uma medida da "concentração efetiva" das espécies em equilíbrio, de modo que a razão das atividades das espécies de um sistema em equilíbrio é constante para qualquer condição experimental do mesmo, contanto que a temperatura permaneça constante.
+    \begin{gather}
+        K^T = \frac{a_c^c a_D^d}{a_A^a a_B^b}
+    \end{gather}
+
+    A esta constante, que relaciona atividades de produtos e substâncias reagentes, se denomina constante de equilíbrio termodinâmico ($K^T$), enquanto as constantes de equilíbrio expressas em termos de concentração são denominadas constantes de equilíbrio estequiométricas ($K$). Ambas as constantes podem ser relacionadas através do coeficiente de atividade ($\gamma_i$), que é definido como o fator que relaciona a concentração de uma espécie com a sua atividade:
+    \begin{gather}
+        a_i = \gamma_i C_i
+    \end{gather}
+    Assim, levando em consideração os coeficientes de atividade, é possível relacionar o valor de uma constante de equilíbrio termodinâmica com sua correspondente estequiométrica:
+    \begin{gather}
+        \begin{align}
+            K^T & = \frac{a_C^c a_D^d}{a_A^a a_B^b}                                             \\
+                & = \frac{[C]^c \gamma_C^c [D]^d \gamma_D^d}{[A]^a \gamma_A^a [B]^b \gamma_B^b} \\
+                & = K \frac{\gamma_C^c \gamma_D^d}{\gamma_A^a \gamma_B^b}
+        \end{align}
+    \end{gather}
+\end{definition}
+
+\section*{Tipos de equilíbrio}
+
+Podem-se distinguir basicamente dois tipos de equilíbrio, homogêneos e heterogêneos, regidos por suas correspondentes constantes de equilíbrio. Os homogêneos ocorrem em uma única fase, geralmente líquida, enquanto os heterogêneos envolvem duas ou mais fases, seja porque no curso do processo uma segunda fase é gerada, como ocorre nas reações de precipitação, ou porque ambas as fases são diferentes, como é o caso da extração líquido-líquido.
+
+Entre os equilíbrios homogêneos, os seguintes tipos podem ser distinguíveis:
+
+\subsection*{Equilíbrio ácido-base}
+
+\begin{definition}[Equilíbrio ácido-base]
+    São aqueles nos quais ocorre uma troca de prótons (teoria de Bronsted) ou uma troca de pares de elétrons (teoria de Lewis). O equilíbrio ácido-base é regulado pela constante de acidez (Ka) ou constante de dissociação. Assim, para a reação de dissociação de um ácido, pode-se expressar a constante de acidez como:
+    \begin{gather}
+        HA + H_2O \leftrightharpoons A^- + H_3O^+ \\
+        K_a = \frac{[A^-][H_3O^+]}{[HA]}
+    \end{gather}
+    Também é considerada a constante de basicidade (Kb), que corresponde à protonação de uma base:
+    \begin{gather}
+        B + H_2O \leftrightarrow HB^+ + OH^- \\
+        K_b = \frac{[HB^+]{OH^-}}{[B]}
+    \end{gather}
+\end{definition}
+
+\begin{definition}[Produto iônico da água]
+    Neste contexto, também pode-se considerar o equilíbrio ácido-base correspondente à autoprotonação do solvente, uma vez que certos solventes podem atuar como ácido ou como base, sendo o caso mais característico a água. A constante deste equilíbrio é denominada constante de autoprotólise e, no caso particular da água, é chamada de produto iônico da água (Kw):
+    \begin{gather}
+        H_2O + H_2O \leftrightharpoons H_3O^+ + OH^- \\
+        K_w = [H_3O^+][OH^-]
+    \end{gather}
+\end{definition}
+
+\subsection*{Equilíbrio de complexação}
+
+Em um sentido amplo, a complexação consiste na associação de duas espécies que podem existir isoladamente. Essa definição é tão ampla que inclui a maior parte das reações analíticas. Por exemplo, nesse sentido, as reações:
+
+\begin{gather}
+    CH_3COO^- + H^+ \leftrightharpoons CH_3COOH \\
+    Ag^+ + Cl^- \leftrightharpoons AgCl_{(S)}
+\end{gather}
+
+podem ser consideradas reações de complexação, embora na realidade se trate de reações ácido-base e de precipitação, respectivamente.
+
+Em um sentido mais estrito, a complexação é definida como o processo no qual ocorre a transferência de um ou mais pares de elétrons de uma espécie doadora (átomo carregado negativamente ou molécula), chamada ligante, para uma espécie aceitadora. Ainda assim, o equilíbrio ácido-base poderia ser considerado um caso particular do equilíbrio de complexação, uma vez que, de acordo com a teoria de Lewis, os ligantes seriam bases e as espécies aceitadoras seriam ácidos. Para evitar essa circunstância, geralmente aceita-se que a complexação se limita ao caso da formação dos chamados complexos de coordenação, nos quais a espécie que aceita pares de elétrons é um íon metálico (complexos metálicos).
+
+\begin{definition}[Equilíbrio de complexação]
+    A reação de complexação entre um íon metálico ($M$) e $n$ moléculas de um ligante ($L$) pode ser abordada a partir de duas perspectivas complementares:
+
+    1. Considerando o equilíbrio global de formação do complexo, ou seja, a formação de um único complexo de máxima estequiometria:
+
+    \[ M^{n+} + nL^- \leftrightharpoons ML_n \]
+
+    Este equilíbrio é regido pela sua constante de formação global ($\beta_n$):
+
+    \[
+        \beta_n = \frac{[ML_n]}{[M^{n+}][L^-]^n}
+    \]
+
+    2. A partir da formação escalonada dos diferentes complexos, que para n = 2 resultaria nos seguintes equilíbrios:
+
+    \begin{gather}
+        M^{2+} + L^- \leftrightharpoons ML^+ \\
+        ML^+ + L^- \leftrightharpoons ML_2
+    \end{gather}
+
+    sendo suas constantes respectivas:
+
+    \begin{gather}
+        K_1 = \frac{[ML^+]}{[M^{2+}][L^-]} \\
+        K_2 = \frac{[ML_2]}{[ML^+][L^-]}
+    \end{gather}
+
+    As constantes K1 e K2 são denominadas constantes de formação sucessivas, e é claramente perceptível que o produto dessas corresponde à constante de formação global.
+
+\end{definition}
+
+\subsection*{Equilíbrio de oxidação-redução}
+
+\begin{definition}[Equilíbrio de oxidação-redução]
+    Em um equilíbrio de oxidação-redução (também conhecido como equilíbrio redox), ocorre uma troca de elétrons. O processo no qual uma espécie perde elétrons é conhecido como oxidação, enquanto o processo no qual ganha é conhecido como redução. Portanto, uma reação de oxidação-redução pode ser considerada a combinação de duas semirreações, ou pares redox, uma na qual um composto, chamado de agente oxidante ($Ox_1$), é reduzido, e outra na qual um segundo composto, chamado de agente redutor ($Red_2$), é oxidado:
+    \begin{gather}
+        \begin{split}
+            Ox_1 + n_1 e &\leftrightharpoons Red_1 \\
+            Red_2 &\leftrightharpoons Ox_2 + n_2 e \\
+            \noalign{\smallskip} \hline \noalign{\smallskip}
+            n_2 Ox_1 + n_1 Red_2 &\leftrightharpoons n_2 Red_1 + n_1 Ox_2
+        \end{split}
+    \end{gather}
+    A constante de equilíbrio da reação depende das capacidades oxidante e redutora respectivas dos compostos envolvidos, caracterizadas pelo chamado potencial padrão ou normal (E0). Conforme mostrado no capítulo que trata dos equilíbrios de oxidação-redução, essa constante é dada pela expressão:
+    \begin{gather}
+        K \log K = \frac{E_1^0 - E_2^0}{0,059} n_1 n_2
+    \end{gather}
+    em que $E_1^0$ e $E_2^0$ são os potenciais padrão dos sistemas redox envolvidos no equilíbrio.
+\end{definition}
+
+\subsection*{Equilíbrios heterogêneos}
+
+Os equilíbrios heterogêneos, por sua vez, são aqueles que envolvem duas ou mais fases. Os casos mais comuns em Química Analítica são os de precipitação, que envolvem a formação de uma fase sólida, e os de distribuição, nos quais ocorre a transferência de uma espécie em uma fase líquida para outra fase que pode ser líquida (extração líquido-líquido) ou sólida (extração líquido-sólido e troca iônica).
+
+\begin{definition}[Equilíbrio de precipitação]
+    A precipitação, ou o processo inverso de dissolução de um sólido iônico, pode ser representado pela reação:
+    \begin{gather}
+        n M^{m+} + m N^{n-} \leftrightharpoons {M_n N_m}_{(S)}
+    \end{gather}
+    A constante que regula esse equilíbrio é denominada constante do produto de solubilidade ou, de forma mais simples, produto de solubilidade, e é representada por Ks:
+    \begin{gather}
+        K_s = [M^{m+}]^n [N^{n-}]^m
+    \end{gather}
+\end{definition}
+
+\section*{Estudo sistemático do equilíbrio químico}
+
+Para abordar o estudo dos diferentes tipos de equilíbrio químico, é conveniente desenvolver uma sistemática que permita o cálculo das concentrações das diferentes espécies presentes nele. Esse processo de cálculo é baseado em obter um número de equações igual ao número de espécies que se deseja quantificar, ou seja, ao número de incógnitas que são consideradas. Essas incógnitas são as concentrações em equilíbrio de todas as espécies presentes na solução, e seu número variará dependendo do composto ou compostos presentes. A informação que deve ser considerada para obter o número de equações que relacionem satisfatoriamente as espécies a serem quantificadas e calcular suas concentrações é concretizada nos seguintes pontos:
+
+\begin{itemize}
+    \item Descrição de todas as reações que ocorrem na solução considerada, acompanhadas de suas respectivas constantes de equilíbrio. Assim, por exemplo, no caso de equilíbrios ácido-base, é necessário considerar os equilíbrios de dissociação de ácidos e bases, autoprotólise do solvente, etc.
+    \item Considerar os balanços que podem ser estabelecidos entre as espécies a serem quantificadas, como o balanço de massas e o balanço de cargas. No caso específico dos equilíbrios ácido-base, é interessante considerar, além dos balanços indicados, o balanço protônico.
+    \item Uma vez obtida essa informação, é possível resolver diretamente o sistema de equações proposto para obter as concentrações de todas as espécies envolvidas no(s) equilíbrio(s) em estudo, ou realizar uma série de aproximações prévias para abordar sua resolução de maneira mais simples e imediata.
+\end{itemize}
+
+\includegraphics*[width=\linewidth]{./images/balanco_massas.png}
+
+\includegraphics*[width=\linewidth]{./images/balanco_cargas.png}

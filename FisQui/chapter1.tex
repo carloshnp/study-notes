@@ -1,7 +1,5 @@
 \lecture{1}{}{Fenômenos de superfície}
 
-\begin{multicols*}{2}
-
   \section*{Revisão de termodinâmica}
 
   \paragraph{ }
@@ -25,20 +23,20 @@
       dU = TdS - pdV \ \text{(equação fundamental)}
     \end{gather}
   \end{corollary}
-  
+
   Portanto a energia interna de um sistema fechado é função da entropia (distribuição de energia no sistema) e do volume (distância média entre as partículas), ou seja:
   \begin{theorem}[Energia interna como função da entropia e volume]
     \begin{gather}
       U = U(S,V) \\
       dU = \left( \frac{\partial U}{\partial S} \right)_V dS + \left( \frac{\partial U}{\partial V}  \right)_S dV \\
       \left( \frac{\partial U}{\partial S}  \right)_V = T \ , \ \left( \frac{\partial U}{\partial V}  \right)_S = -p
-    \end{gather}  
+    \end{gather}
   \end{theorem}
 
   Em sistemas abertos, há a troca de massa com as vizinhanças, portanto a energia pode ser alterada a partir da variação das composições das espécies, onde $n_i$ é o número de moles do sistema.
   \begin{theorem}[Energia interna em sistemas abertos como função]
     \begin{gather}
-      U = U(S,V,n_1,n_2, \cdots)    
+      U = U(S,V,n_1,n_2, \cdots)
     \end{gather}
   \end{theorem}
 
@@ -85,12 +83,12 @@
   \begin{definition}[Diferencial da energia de Gibbs com variação dos moles]
     \begin{gather}
       \begin{align}
-        dG = & \left( \frac{\partial G}{\partial T}  \right)_{p, n_1, n_2, \cdots} dT + \\
-             & \left( \frac{\partial G}{\partial p}  \right)_{T, n_1, n_2, \cdots} dp + \\
-             & \left( \frac{\partial G}{\partial n_1}  \right)_{T, p, n_2, \cdots} dn_1 + \\
+        dG = & \left( \frac{\partial G}{\partial T}  \right)_{p, n_1, n_2, \cdots} dT +          \\
+             & \left( \frac{\partial G}{\partial p}  \right)_{T, n_1, n_2, \cdots} dp +          \\
+             & \left( \frac{\partial G}{\partial n_1}  \right)_{T, p, n_2, \cdots} dn_1 +        \\
              & \left( \frac{\partial G}{\partial n_2}  \right)_{T, p, n_1, \cdots} dn_2 + \cdots
       \end{align}
-    \end{gather}    
+    \end{gather}
   \end{definition}
 
   \begin{corollary}
@@ -103,11 +101,11 @@
       \left( \frac{\partial G}{\partial T}  \right)_{p, n_1, n_2, \cdots} = -S \\
       \left( \frac{\partial G}{\partial p}  \right)_{T, n_1, n_2, \cdots} = V
     \end{gather}
-    Portanto, podemos reescrever a equação de Gibbs na forma diferencial como: 
+    Portanto, podemos reescrever a equação de Gibbs na forma diferencial como:
     \begin{gather}
       \begin{align}
-        dG = & -SdT + Vdp + \\
-             & \left( \frac{\partial G}{\partial n_1}  \right)_{T, p, n_2, \cdots} dn_1 + \\
+        dG = & -SdT + Vdp +                                                                      \\
+             & \left( \frac{\partial G}{\partial n_1}  \right)_{T, p, n_2, \cdots} dn_1 +        \\
              & \left( \frac{\partial G}{\partial n_2}  \right)_{T, p, n_1, \cdots} dn_2 + \cdots
       \end{align}
     \end{gather}
@@ -122,8 +120,8 @@
     E portanto, para um sistema de composição variável:
     \begin{gather}
       \begin{align}
-        dG &= -SdT + Vdp + \mu_1 dn_1 + \mu_2 dn_2 + \cdots \\
-           &= -SdT + Vdp + \sum \mu_i dn_i
+        dG & = -SdT + Vdp + \mu_1 dn_1 + \mu_2 dn_2 + \cdots \\
+           & = -SdT + Vdp + \sum \mu_i dn_i
       \end{align}
     \end{gather}
   \end{theorem}
@@ -166,22 +164,22 @@
     \begin{gather}
       \begin{align}
         dG^{A} = & \left( \frac{\partial G}{\partial n_1}  \right)_{T,p,n_2, \cdots,A} dn_1 + \\
-               & \left( \frac{\partial G}{\partial n_2}  \right)_{T,p,n_1,\cdots,A} dn_2 + \\
-               & \cdots + \\
-               & \left( \frac{\partial G}{\partial A} \right)_{T,p,n_1} dA
+                 & \left( \frac{\partial G}{\partial n_2}  \right)_{T,p,n_1,\cdots,A} dn_2 +  \\
+                 & \cdots +                                                                   \\
+                 & \left( \frac{\partial G}{\partial A} \right)_{T,p,n_1} dA
       \end{align}
     \end{gather}
 
     \begin{gather}
       \begin{aligned}
-        dG^{A} = \mu_1^{A} dn_1^{A} + \mu_2^{A} dn_2^{A} + \cdots + \gamma dA 
+        dG^{A} = \mu_1^{A} dn_1^{A} + \mu_2^{A} dn_2^{A} + \cdots + \gamma dA
       \end{aligned}
     \end{gather}
     Desta forma, temos $\gamma$, que é a energia superficial, ou seja, a energia por unidade de área da superfície. Portanto:
     \begin{gather}
       \gamma = \frac{E}{A} = \frac{F d}{d^2} = \frac{F}{d}
     \end{gather}
-    Logo, $\gamma$ é dada por $erg/cm^2$ ou $dinas/cm$. 
+    Logo, $\gamma$ é dada por $erg/cm^2$ ou $dinas/cm$.
   \end{definition}
   \begin{remark}
     Quando exprimimos $\gamma$ como energia por área, chamamos de \textbf{energia superficial}, e quando exprimimos $\gamma$ como força por comprimento chamamos de \textbf{tensão superficial}.
@@ -192,11 +190,11 @@
     \begin{gather}
       dG^A = \mu_1^A dn_1^A + \mu_2^A dn_2^A + \gamma dA \\
       dG^A = \mu_1^A dn_1^A + n_1^A d\mu_1^A + \mu_2^A dn_2^A \\ + n_1^A d \mu_1^A + \gamma dA + A d \gamma \\
-      n_1^A d \mu_1^A + n_2^A d \mu_2^A + A d\gamma = 0 \\ 
+      n_1^A d \mu_1^A + n_2^A d \mu_2^A + A d\gamma = 0 \\
       \text{(equação para a superfície)} \\
-      n_1 d\mu_1 + n_2 d \gamma_2 = 0 \\ 
+      n_1 d\mu_1 + n_2 d \gamma_2 = 0 \\
       \text{(equação para o seio da solução)}
-    \end{gather}    
+    \end{gather}
     Para a equação do seio da solução, podemos escrever que:
     \begin{gather}
       d\mu_1 = - \frac{n_2}{n_1} d\mu_2
@@ -210,7 +208,7 @@
     \end{gather}
     E utilizando a equação para a superfície, e substituindo os termos, temos que:
     \begin{gather}
-      n_1^A d \mu_1^A + n_2^A d \mu_2^A + A d\gamma = 0 \\ 
+      n_1^A d \mu_1^A + n_2^A d \mu_2^A + A d\gamma = 0 \\
       n_1^A = \left( - \frac{n_2}{n_1} d\mu_2 \right) + n_2^A d \mu_2 + A d \gamma = 0 \\
       \left( n_2^A - \frac{n_2 n_1^A}{n_1} \right) d \mu_2 = - A d \gamma \\
       \frac{\left( n_2^A - \frac{n_2 n_1^A}{n_1} \right)}{A} = - \frac{d \gamma}{d \mu_2}
@@ -241,10 +239,7 @@
 
     Quando $\Gamma_2$ é nulo:
     \begin{gather}
-      n_2^A = \left( \frac{n_1^A n_2}{n_1}
+      n_2^A = \left( \frac{n_1^A n_2}{n_1} \right)
     \end{gather}
     Ou seja, não existe diferenças de concentração entre a superfície e o seio da solução. Logo, não existe adsorção.
   \end{corollary}
-
-
-\end{multicols*}
