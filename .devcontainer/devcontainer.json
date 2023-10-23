@@ -1,4 +1,4 @@
 {
-    "image": "ubuntu_v1",
-    "forwardPorts": [3000]
+    "name": "study-container",
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu"
 }
